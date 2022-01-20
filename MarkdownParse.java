@@ -10,20 +10,36 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then take up to
         // the next )
         int currentIndex = 0;
+        //run through entire string
         while(currentIndex < markdown.length()) {
+            //("", x) the first time it shows up after certain index x
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
+            //link open
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
+            //end
             toReturn.add(markdown.substring(openParen + 1, closeParen));
+            //System.out.println(currentIndex); // 0 43
+            System.out.println(markdown.charAt(currentIndex));
+            //look forward from that point instead of backward
             currentIndex = closeParen + 1;
+            //
+            //System.out.println(currentIndex); // 43 76
+            //charAt
+            
         }
         return toReturn;
     }
     public static void main(String[] args) throws IOException {
 		Path fileName = Path.of(args[0]);
+        //reads the file, parsh it into the string
 	    String contents = Files.readString(fileName);
+        //call from main
         ArrayList<String> links = getLinks(contents);
         System.out.println(links);
     }
 }
+
+//image ![]()
+//link []() 
