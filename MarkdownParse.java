@@ -42,7 +42,7 @@ public class MarkdownParse {
     }
     public static void main(String[] args) throws IOException {
 		Path fileName = Path.of(args[0]);
-        //reads the file, parsh it into the string
+        //reads the file, parse it into the string
 	    String contents = Files.readString(fileName);
         //call from main
         ArrayList<String> links = getLinks(contents);
