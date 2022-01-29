@@ -14,7 +14,7 @@ import org.junit.*;
 
 public class MarkdownParseTest {
     //declare a test method
-    @Test
+    //@Test
     public void addition() {
         //expected and actual values
         assertEquals(2, 1 + 1);
@@ -27,5 +27,32 @@ public class MarkdownParseTest {
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents); 
         assertEquals(List.of("https://something.com" ,"some-page.html"), links);
+    }
+
+    @Test
+    public void testGetImages() throws IOException{
+        //MarkdownParse.main(["test-file.md"]);
+        Path fileName = Path.of("test-file2.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents); 
+        assertEquals(List.of("some-page.html"), links);
+    }
+
+    @Test
+    public void testLinks() throws IOException{
+        //MarkdownParse.main(["test-file.md"]);
+        Path fileName = Path.of("test-file3.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents); 
+        assertEquals(List.of("https://ucsd-cse15l-w22.github.io/" ,"some-page.html"), links);
+    }
+
+    @Test
+    public void testGetWithoutParen() throws IOException{
+        //MarkdownParse.main(["test-file.md"]);
+        Path fileName = Path.of("test-file4.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents); 
+        assertEquals(List.of(), links);
     }
 }
