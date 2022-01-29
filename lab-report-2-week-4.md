@@ -6,6 +6,7 @@ code change difference: Now can differentiate a picture and a link
 ![lab4screenshot](imageproblem.png)
 
 [test file 2](https://github.com/yayajjiang/markdown-parse/blob/main/test-file2.md)
+
 output:
 ![lab4screenshot](testgetimage_error.png)
 
@@ -35,7 +36,7 @@ are only links in the file, then implementing the test will avoid the error.
 
 code change difference: Can eliminate the format difference without `[]`
 
-![lab4screenshot](missingparenthesis.png)
+![lab4screenshot](missingparenthesisproblem.png)
 
 [test file 4](https://github.com/yayajjiang/markdown-parse/blob/main/test-file4.md)
 
