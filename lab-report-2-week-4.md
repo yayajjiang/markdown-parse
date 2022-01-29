@@ -5,7 +5,7 @@
 code change difference: Now can differentiate a picture and a link
 ![lab4screenshot](imageproblem.png)
 
-![test file 2](https://github.com/yayajjiang/markdown-parse/blob/main/test-file2.md)
+[test file 2](https://github.com/yayajjiang/markdown-parse/blob/main/test-file2.md)
 output:
 ![lab4screenshot](testgetimage_error.png)
 
@@ -21,7 +21,7 @@ be recognized and return the link
 
 ![lab4screenshot](linksonlyproblem.png)
 
-![test file 3](https://github.com/yayajjiang/markdown-parse/blob/main/test-file3.md)
+[test file 3](https://github.com/yayajjiang/markdown-parse/blob/main/test-file3.md)
 
 output:
 ![lab4screenshot](onlylinks_error.png)
@@ -32,10 +32,12 @@ are only links in the file, then implementing the test will avoid the error.
 
 
 ## Third code changes
+
 code change difference: Can eliminate the format difference without `[]`
+
 ![lab4screenshot](missingparenthesis.png)
 
-![test file 4](https://github.com/yayajjiang/markdown-parse/blob/main/test-file4.md)
+[test file 4](https://github.com/yayajjiang/markdown-parse/blob/main/test-file4.md)
 
 output:
 ![lab4screenshot](testgetimage_error.png)
